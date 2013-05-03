@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source "http://gems.github.com"
 
-gem 'rails', '3.2.11'
+gem 'rails'
 gem "rvm-capistrano"#, "1.2.7"
 gem "cancan"#, "1.6.8"
 gem "sqlite3-ruby"#, "1.3.3"
@@ -27,7 +27,6 @@ gem "daemons"#, "1.1.9"
 gem "delayed_job_active_record"#, "0.3.3"
 gem "delayed_job_web"#, "1.1.2"
 gem "delayed_task"#, "0.2.0"
-gem "youtube_it"#, "2.1.8"
 gem "browser", "0.1.5"
 
 # SUNSPOT / SOLR
@@ -37,7 +36,6 @@ gem 'sunspot_cell', :git => 'git://github.com/zheileman/sunspot_cell.git'
 gem "sunspot_autocomplete", ">= 0.0.3", :git => "git@github.com:xponrails/sunspot_autocomplete.git"
 
 gem "timezone"#, "0.1.5" # Required for Timezone Calculation and Time Conversion
-gem "progress_bar"#, "0.4.0" # Used for sunspot reindex progress
 gem "spreadsheet"#, "0.7.4"
 gem "flash_cookie_session"#, "1.1.3" # Required for Uploadify
 gem "yaml_db"#, "0.2.3"

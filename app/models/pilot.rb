@@ -1,0 +1,3 @@
+class Pilot < User
+
+end

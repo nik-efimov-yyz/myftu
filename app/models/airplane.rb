@@ -7,10 +7,11 @@ class Airplane < ActiveRecord::Base
   has_many :flights
   has_many :snags
   has_many :notes, :as => :notable
+  has_many :photos, :as => :picturable
 
-  attr_accessible :manufacturer_title, :model_title, :serial_number, :registration, :year
+  attr_accessible :manufacturer_name, :model_name, :serial_number, :registration, :year
 
-  attr_accessor :manufacturer_title, :model_title
+  attr_accessor :manufacturer_name, :model_name
 
   def aircraft_type
     parts = []

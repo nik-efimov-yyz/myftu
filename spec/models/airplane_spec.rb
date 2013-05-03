@@ -3,7 +3,7 @@ require "spec_helper"
 describe Airplane do
 
   subject { airplane }
-  let(:airplane) { create :airplane }
+  let(:airplane) { FactoryGirl.create :airplane }
 
   # Associations
   it { should have_one(:operator) }
@@ -18,6 +18,18 @@ describe Airplane do
   it { should have_many(:restrictions) }
 
   # Validations
-  it { should validate_presence_of(:company_id) }
+  it { should validate_presence_of(:user_id) }
+
+  context "saving" do
+    let(:airplane) { FactoryGirl.create :airplane, :manufacturer_name => "Cessna", :model_name => "C172" }
+    it "assigns manufacturer" do
+      airplane.manufacturer.name.should == "Cessna"
+    end
+
+    it "assigns model" do
+      airplane.model.name.should == "C172"
+    end
+
+  end
 
 end
