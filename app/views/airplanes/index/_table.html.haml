@@ -1,0 +1,11 @@
+%table.table.table-bordered.table-striped.table-condensed
+  %thead
+    %tr
+      %th Registration
+      %th Aircraft Type
+
+  %tbody
+    - for airplane in @airplanes
+      %tr
+        %td= link_to airplane.registration, airplane
+        %td= link_to airplane.aircraft_type, airplane

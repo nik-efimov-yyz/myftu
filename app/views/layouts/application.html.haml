@@ -1,0 +1,14 @@
+!!!
+%html
+  %head= render "shared/head"
+  %body
+    .container
+      #site-header= render "shared/header"
+      #site-content
+      = render "shared/flash_messages"
+      = yield
+      .clearfix
+
+    #site-footer
+      .container= render "shared/footer"
+

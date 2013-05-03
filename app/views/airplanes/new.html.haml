@@ -1,0 +1,19 @@
+.row
+  .span12
+    .page-header
+      %h1 New Aircraft
+
+    = form_for @airplane do |f|
+      = f.label :manufacturer_title
+      = f.text_field :manufacturer_title
+      = f.label :model_title
+      = f.text_field :model_title
+      = f.label :registration
+      = f.text_field :registration
+      = f.label :serial_number
+      = f.text_field :serial_number
+
+      .form-actions
+        = f.submit "Create", :class => "btn btn-success"
+        or
+        = link_to "Cancel", airplanes_path
